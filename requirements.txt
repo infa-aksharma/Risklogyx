@@ -1,0 +1,4 @@
+tabulate
+pandas
+requests
+alive_progress
