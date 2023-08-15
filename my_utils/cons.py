@@ -18,5 +18,5 @@ csocbanner = """
                                                 |  $$$$$$/|  $$$$$$/          
                                                  \______/  \______/           
                                  
-                                               by csoc@informatica.com
+                                               by CSOCTeam
 """""
