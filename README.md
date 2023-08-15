@@ -1,5 +1,7 @@
 # Risklogyx 
+
 [![Made By infa-aksharma - With ❤️](https://img.shields.io/badge/Made_Via_Python-With_❤️-2ea44f?style=for-the-badge&logo=Python&logoColor=yellow)](https://)  
+Risklogyx represents a robust solution that aids in the prioritization of vulnerability patching. It achieves this by amalgamating CVSS, EPSS, and CISA's Known Exploited Vulnerabilities data. This tool delivers invaluable insights into the probability of exploitation and the potential repercussions of vulnerabilities on your information system.
 
 ## Installation
 
