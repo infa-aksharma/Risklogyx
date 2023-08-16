@@ -127,10 +127,10 @@ if __name__ == '__main__':
             if not re.match(r"((CVE|cve)-\d{4}-\d+$)", cve):
                 print(bcolors.FAIL + f"Oops!!! {cve} - CVEs should be provided in the standard format CVE-YYYY-NNNN")
                 if verbos:
-                    df = pd.DataFrame([[cve,'Invalid CVE','Invalid CVE','Invalid CVE','Invalid CVE']], columns = ['CVE', 'CVSS','EPSS','CISA','INFA Severity'])
+                    df = pd.DataFrame([[cve,'Invalid CVE','Invalid CVE','Invalid CVE','Invalid CVE']], columns = ['CVE', 'CVSS','EPSS','CISA','New Severity'])
                 else:
 
-                    df = pd.DataFrame([[cve,'Invalid CVE']], columns = ['CVE', 'INFA Severity'])
+                    df = pd.DataFrame([[cve,'Invalid CVE']], columns = ['CVE', 'New Severity'])
                 pass
             else:
                 if re.match(r"cve-\d{4}-\d+$",cve):
@@ -141,10 +141,10 @@ if __name__ == '__main__':
                 #bar.text('processing CVE '+ cve)
                 output=process(cve,bar,output,verbos,API)
                 if verbos:
-                    df = pd.DataFrame(output, columns = ['CVE', 'CVSS','EPSS','CISA','INFA Severity'])
+                    df = pd.DataFrame(output, columns = ['CVE', 'CVSS','EPSS','CISA','New Severity'])
                 else:
 
-                    df = pd.DataFrame(output, columns = ['CVE', 'INFA Severity'])
+                    df = pd.DataFrame(output, columns = ['CVE', 'New Severity'])
                 #print(df)
             bar()
 
