@@ -212,7 +212,7 @@ def process(cve,bar,output,verbos,API):
             cvss_score="CVSS score not available"
 
         if verbos:
-            output.append([cve,cvss_score,epss_score,cisa,priority])
+            output.append([cve,float(cvss_score),float(epss_score),cisa,priority])
         else:
             output.append([cve,priority])
         return output
