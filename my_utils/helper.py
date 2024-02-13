@@ -227,11 +227,11 @@ def process(cve,bar,output,verbos,API):
     if (cisa == True or (float(epss_score) > 0.2 and float(cvss_score) > 6.0)):
         priority = 'Critical'
 
-    elif ( float(epss_score) < 0.2 and float(cvss_score) > 6.0) :
+    elif ( float(epss_score) <= 0.2 and float(cvss_score) > 6.0) :
         priority = 'Medium'
-    elif (float(epss_score) > 0.2 and float(cvss_score) < 6.0 ):
+    elif (float(epss_score) > 0.2 and float(cvss_score) <= 6.0 ):
         priority = 'High'
-    elif ( float(epss_score) < 0.2 and float(cvss_score) < 6.0 ):
+    elif ( float(epss_score) <= 0.2 and float(cvss_score) <= 6.0 ):
         priority = 'Low'
     if verbos:
         output.append([cve,cvss_score,epss_score,cisa,priority])
